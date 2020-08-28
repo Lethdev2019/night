@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+::selection {
+  background: rgb(221, 221, 221);
+}
+
+body {
+	background-color: black;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+img {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: rgb(0, 195, 255);
+}
+
+hr {
+	clear: left;
+}
+
+code {
+	color: rgb(0, 195, 255);
+}
+
+.header {
+	float: left;
+}
+
+#home {
+	margin-left: 2%;
+}
+
+#docs {
+	margin-left: 5%;
+}
+
+#code {
+	margin-left: 5%;
+	margin-bottom: 25px;
+}
+
+#doc {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#contents {
+	margin-bottom: 30px;
+}
+
+.section {
+	margin-top: 30px;
+}
+
+.desc {
+	width: 65%;
+}
+
+body .gist .gist-file {
+  width: 65%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+body .gist .blob-num {
+  background-color: rgb(49, 49, 49);
+  color: rgb(219, 219, 219);
+}
+
+body .gist .blob-code {
+	background-color: black;
+	color: white;
+}
+
+body .gist .gist-meta {
+  display: none;
+}
+
+body .gist .gist-data {
+  background-color: #f1f3f5;
+  border-bottom: none;
+}
+
+body .gist ::selection {
+  background: rgb(0, 195, 255);
+}

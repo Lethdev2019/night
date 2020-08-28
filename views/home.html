@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet preconnect prefetch" type="text/css" href="https://FlightCSS.foxglovedev.repl.co/host/flightcss/beta.css">
+  <link rel="stylesheet preconnect prefetch" type="text/css" href="css/theme.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+  <body style="overflow-x: hidden;">
+		<nav class="nav">
+      <a onclick="window.location= '/'"><img class="brand" rel="preconnect prefetch" src="images/logo-white.svg" style="padding: 5px;"></img></a>
+      <input class="search" id="searchbar" placeholder="Search"></input><button id="submit" style="display: none;" onclick="go()">submit</button>
+      <div class="nav-item">
+         <a href="#">Documentation</a>
+      </div>
+      <div class="nav-item">
+         <a href="#">Download</a>
+      </div>
+    </nav>
+    <style>
+      #results  a{
+        color: #eee;
+        text-decoration: none;
+      }
+      #results{
+        color: #777;
+        text-decoration: none;
+      }
+    </style>
+    <style>
+      a{
+        color: #888;
+        text-decoration: none;
+      }
+    </style>
+    <div class="main" style="width: 100%;">
+      
+      <!-- browser thing -->
+      <style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.container {
+  border: 3px solid rgb(13, 16, 30);
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute; 
+  right: 10px;
+  display: inline-block;
+  z-index: 1000;
+  max-width: calc(60% - 20px);
+  background-color: rgb(13, 16, 30);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes blink {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes introduction {
+  0% {opacity: 0; transform: translateY(10px);}
+  100% {opacity: 1; transform: translateY(0px);}
+}
+
+.intro{
+  position: absolute; 
+  z-index: 100; 
+  width: calc(100% - 50px - 60% - 10px); 
+  left: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: none;
+  }
+
+  .intro{
+    position: absolute; 
+    z-index: 100; 
+    width: calc(100% - 100px); 
+    left: 50px;
+  }
+}
+
+.top {
+  padding: 10px;
+  background: rgb(13, 16, 30);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.content {
+  font-family: "Lucida Console", Courier, monospace !important;
+  padding-left: 10px;
+}
+
+.content *{
+  font-family: "Lucida Console", Courier, monospace !important;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top">
+    <span class="dot" style="background:#ED594A;"></span>
+    <span class="dot" style="background:#FDD800;"></span>
+    <span class="dot" style="background:#5AC05A;"></span>
+  </div>
+
+  <div class="content" style="width: 100vw; min-height: calc(100vh - 175px);">
+    Hello world!
+    <br></br>
+    What is your name? <font color="#888">Squid</font>
+    <br>
+    Hi Squid!
+    <br></br>
+    9
+    <br></br>
+    <font color="#40ee40">DynamicSquid@ubuntu</font>:<font color="#8888ff"> ~</font>Desktop<font color="#40ee40">$</font> <a style="animation: blink 1s infinite;">&#9611;</a>
+  </div>
+</div>
+<!-- end thing -->
+  <div class="intro">
+      <h1 style="animation: introduction 1s normal forwards; text-shadow: 0px 0px 9px rgba(244, 244, 244, 0.7);">Night</h1>
+      <p style="animation: introduction 1s normal forwards; text-shadow: 0px 0px 9px rgba(244, 244, 244, 0.7);">Combining the simplicity of python with the type concepts of Clang</p>
+  </div>
+</div>
+<div style="height: 50vh;"></div>
+<svg xmlns="http://www.w3.org/2000/svg" style=" width: calc(100% + 8px);" viewBox="0 0 1440 320"><path fill="#151926" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,213.3C640,213,800,171,960,160C1120,149,1280,171,1360,181.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+  <div style="background-color: #151926; position: relative; top: -20px; width: calc(100%)">
+    <div style="padding-left: 5em; padding-right: 5em; padding-bottom: 3em; background-color: #151926;">
+			<p>Night is an interpreted programming language that combines the simplicity of Python, with the type concepts of the C family. The main goal of Night was to design a intuitive and easy to learn language.</p>
+			<p>On this website, you'll find everything you need to get up and running with Night. Below is each page in detail.</p>
+			<p>A major feature of Night that is targeted towards beginners is the ablility to code right here in this website without any downloads or external packages. You can check out the <a href="online-ide.html">Online IDE</a> page for more information. And just like any other language, Night allows you to build it from source, with thorough instructions on how to get started. You can check that out in the <a href="source-build.html">Source Build</a> page. Currently however, only Windows is supported.</p>
+			<p>This website also features a complete tutorial to the language Night, perfect for beginners or anyone first time here. There's also a reference guide for a more indepth look at specific syntax. Currently, both the <a href="tutorial.html">Tutorial</a> page and <a href="reference.html">Reference</a> guide reflect <code>Night v3.0</code>.</p>
+			<p>And finally, for extra information about this language, you can view the <a href="github.html">GitHub</a> page for a link to the GitHub repository, as well as more information on the specs of Night.</p>
+			<p>Happy coding :)</p>
+    </div>
+  </div>
+    </div>
+    <script>
+      var input = document.getElementById("searchbar");
+
+      // Execute a function when the user releases a key on the keyboard
+      input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("submit").click();
+        }
+      });
+      function search() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("searchbar");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("results");
+          li = ul.getElementsByTagName("li");
+          if (input.value){
+            ul.style.display = "inline-block"
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+          } else{
+            ul.style.display = "none"
+          }
+      }
+      function go(){
+        filter = input.value;
+        window.location ="https://night.lethdev2019.repl.co/search?query="+filter
+      }
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const product = urlParams.get('query')
+      console.log(product)
+      input = document.getElementById("searchbar");
+      input.value = product
+    </script>
+  </body>
+</html>

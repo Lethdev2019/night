@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet preconnect prefetch" type="text/css" href="https://FlightCSS.foxglovedev.repl.co/host/flightcss/beta.css">
+  <link rel="stylesheet preconnect prefetch" type="text/css" href="css/theme.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+  <body>
+		<nav class="nav">
+      <a onclick="window.location= '/'"><img class="brand" rel="preconnect prefetch" src="images/logo-white.svg" style="padding: 5px;"></img></a>
+      <input class="search" id="searchbar" placeholder="Search"></input><button id="submit" style="display: none;" onclick="go()">submit</button>
+    </nav>
+    
+    <style>
+      #results  a{
+        color: #eee;
+        text-decoration: none;
+      }
+      #results{
+        color: #777;
+        text-decoration: none;
+      }
+    </style>
+
+    <div class="main" style="width: 100%;">
+      <ul id="results" style="width: 100%; display: none;">
+        <li><a href="#">Displaying text</a><br>For basic output to the console, you can use the print(); function...</li>
+      </ul>
+      <a id="noav" style="width: 100%;">No results found for this query</a>
+    </div>
+
+    <script>
+      var input = document.getElementById("searchbar");
+
+      // Execute a function when the user releases a key on the keyboard
+      input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("submit").click();
+        }
+      });
+
+      function search() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("searchbar");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("results");
+          nosearch = document.getElementById("noav");
+          nosearch.style.display = "none";
+          li = ul.getElementsByTagName("li");
+          let counter = 0;
+          if (input.value){
+            ul.style.display = "inline-block"
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                    counter++
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+          } else{
+            ul.style.display = "none"
+          }
+          if (counter == 0){
+            nosearch.innerText = 'No search result found for query "'+input.value+'"';
+            nosearch.style.display = "inline-block";
+          }
+      }
+      function go(){
+        filter = input.value;
+        window.location ="https://night.lethdev2019.repl.co/search?query="+filter
+      }
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const product = urlParams.get('query')
+      console.log(product)
+      input = document.getElementById("searchbar");
+      input.value = product
+      search()
+    </script>
+  </body>
+</html>

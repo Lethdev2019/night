@@ -1,0 +1,66 @@
+#sidebar h1, #sidebar img {
+	float: left;
+	margin-bottom: 30px;
+}
+
+#sidebar img {
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#sidebar h1 {
+	margin-left: 20px;
+}
+
+#sidebar {
+	background-color: rgb(26, 25, 25);
+
+	position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100%;
+}
+
+#sidebar hr {
+	clear: left;
+
+	margin-left: 30px;
+	margin-right: 30px;
+
+	border: 1px solid rgb(160, 160, 160);
+}
+
+#sidebar p {
+	padding-left: 40px;
+  font-size: 15px;
+}
+
+#sidebar a {
+	color: #eee;
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+#sidebar a:active {
+	color: rgb(0, 195, 255);
+}
+
+
+
+.main a {
+	color: rgb(0, 195, 255);
+	text-decoration: none;
+}
+
+.main a:hover {
+	text-decoration: underline;
+}
+
+.main a:active {
+	color: rgb(0, 120, 255);
+}

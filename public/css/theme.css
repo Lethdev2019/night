@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --primary: rgb(16, 18, 32) ;
+  --secondary: #222;
+  --page-color: rgb(16, 18, 32);
+  --font: 'Montserrat', sans-serif;
+  --primary-text-color: #ddd;
+  --main-text-color: #ddd;
+}
+
+.search::-webkit-input-placeholder {
+color: #222 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #222 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #222 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #222 !important;  
+}
